@@ -19,6 +19,9 @@
         android:fontFamily="@font/roboto_light"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:maxHeight="400dp"
+        android:maxLines="6"
+        android:scrollHorizontally="false" />
         android:scrollHorizontally="false"
         />
 

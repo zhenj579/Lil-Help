@@ -12,6 +12,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -38,9 +39,11 @@ public class Pop extends Activity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void onClick(View v) throws IOException {
         Intent intent = new Intent();
-        JournalEntry je = DataHandler.get(this, DataHandler.today);
-        if(je != null)
+        JournalEntry je = null;
+        File f = new File(getApplicationContext().getFilesDir()+DataHandler.today);
+        if(f.exists())
         {
+            je = DataHandler.get(this, DataHandler.today);
             Bundle b = new Bundle();
             b.putSerializable(DataHandler.today, je);
             intent.putExtras(b);
