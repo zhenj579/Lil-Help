@@ -1,6 +1,7 @@
 package com.example.lilhelp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -31,7 +32,8 @@ public class Pop extends Activity {
             finish();
         }
         else if(v==ans){
-
+            Intent intent = new Intent(this, Forward_Activity.class);
+            startActivity(intent);
         }
         else if( v==noAns){
 

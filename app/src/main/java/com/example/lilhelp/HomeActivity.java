@@ -26,16 +26,16 @@ public class HomeActivity extends AppCompatActivity {
         cogButton = findViewById(R.id.cogButton);
         infoButton = findViewById(R.id.informationButton);
         JournToday = findViewById(R.id.journalToday);
-        intent = new Intent(this, Forward_Activity.class);
-
-//        JournToday.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(intent);
-//            }
-//        });
+        intent = new Intent(this, PrevJournal_Activity.class);
 
         hisjournal = findViewById(R.id.previousJournals);
+        hisjournal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
         help = findViewById(R.id.HELP);
         cogText = findViewById(R.id.cogtext);
         JourText = findViewById(R.id.journaltext);
