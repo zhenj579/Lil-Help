@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/homeOnPop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/home_icon"
+            android:onClick="onClick" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="228dp"
+            android:layout_height="78dp"
+            android:layout_below="@id/homeOnPop"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="true"
+            android:text="Would you like to answer questions or head straight to the journal?"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView4">
+
+            <Button
+                android:id="@+id/AnswQ"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView4"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/noAnsQ"
+                android:onClick="onClick"
+                android:text="Answer Questions"
+                app:layout_constraintEnd_toStartOf="@+id/noAnsQ"
+                app:layout_constraintHorizontal_bias="0.742"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <Button
+                android:id="@+id/noAnsQ"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView4"
+                android:layout_centerInParent="false"
+                android:layout_marginTop="4dp"
+                android:onClick="onClick"
+                android:text="Skip Questions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.773"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
