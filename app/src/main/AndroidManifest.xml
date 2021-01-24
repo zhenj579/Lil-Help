@@ -23,6 +23,7 @@
         <activity android:name=".Grateful_Activity"/>
         <activity android:name=".Accomplished_Activity"/>
         <activity android:name=".JournalScreen"/>
+
         <activity android:name=".Pop" android:theme="@style/AppTheme.CustomTheme"></activity>
 
         <meta-data

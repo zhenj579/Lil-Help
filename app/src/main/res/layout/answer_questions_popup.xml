@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/button_bg">
+    android:background="#FFFFFF">
 
     <RelativeLayout
         android:id="@+id/relll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="#FFFFFF">
+        android:background="@drawable/button_bg">
 
         <Button
             android:id="@+id/homeOnPop"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/x_button_bg"
             android:onClick="onClick" />
 
@@ -30,6 +30,7 @@
             android:layout_centerInParent="false"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/roboto_light"
+            android:layout_margin="20dp"
             android:text="Would you like to answer questions or head straight to the journal?"
             android:textColor="#000000"
             android:textSize="18sp"
@@ -44,8 +45,9 @@
                 android:id="@+id/AnswQ"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_below="@id/textView4"
-                android:layout_marginTop="4dp"
                 android:layout_toRightOf="@id/noAnsQ"
                 android:background="@drawable/button_bg"
                 android:fontFamily="@font/roboto_light"
@@ -62,7 +64,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView4"
                 android:layout_centerInParent="false"
-                android:layout_marginTop="4dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/button_bg"
                 android:fontFamily="@font/roboto_light"
                 android:onClick="onClick"
