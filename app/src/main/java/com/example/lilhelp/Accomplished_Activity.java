@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 public class Accomplished_Activity extends AppCompatActivity {
 
@@ -21,14 +20,11 @@ public class Accomplished_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accomplished_);
         Bundle b = getIntent().getExtras();
-        final String today = LocalDateTime.now().toString().substring(0,10); // trim off the clock portion of the date
-        JournalEntry je = (JournalEntry)  b.getSerializable(today);
+        JournalEntry je = (JournalEntry)  b.getSerializable(DataHandler.today);
         final EditText ans = (EditText) findViewById(R.id.aq_answer);
-        Bundle saved = getIntent().getExtras();
-        if(saved != null)
+        if(je.getAq() != null)
         {
-            JournalEntry savedJE = (JournalEntry) saved.getSerializable(today);
-            String savedContent = savedJE.getAq().getAnswer();
+            String savedContent = je.getAq().getAnswer();
             ans.setText(savedContent);
         }
         Button homeButton = (Button) findViewById(R.id.accomplished_question_home_button);
@@ -47,7 +43,7 @@ public class Accomplished_Activity extends AppCompatActivity {
                 JournalEntry je = new JournalEntry();
                 if(getIntent().getExtras() != null)
                 {
-                    je = (JournalEntry) getIntent().getExtras().getSerializable(today);
+                    je = (JournalEntry) getIntent().getExtras().getSerializable(DataHandler.today);
                 }
                 String content = ans.getText().toString();
                 if(je.getAq() == null)
@@ -61,7 +57,35 @@ public class Accomplished_Activity extends AppCompatActivity {
                     je.getAq().setAnswer(content);
                 }
                 Bundle b = new Bundle();
-                b.putSerializable(today, (Serializable) je);
+                b.putSerializable(DataHandler.today, (Serializable) je);
+                intent.putExtras(b);
+                startActivity(intent);
+            }
+        });
+
+        Button backButton = (Button) findViewById(R.id.accomplished_back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Grateful_Activity.class);
+                JournalEntry je = new JournalEntry();
+                if(getIntent().getExtras() != null)
+                {
+                    je = (JournalEntry) getIntent().getExtras().getSerializable(DataHandler.today);
+                }
+                String content = ans.getText().toString();
+                if(je.getAq() == null)
+                {
+                    AccomplishQuestion aq = new AccomplishQuestion();
+                    aq.setAnswer(content);
+                    je.setAq(aq);
+                }
+                else
+                {
+                    je.getAq().setAnswer(content);
+                }
+                Bundle b = new Bundle();
+                b.putSerializable(DataHandler.today, (Serializable) je);
                 intent.putExtras(b);
                 startActivity(intent);
             }

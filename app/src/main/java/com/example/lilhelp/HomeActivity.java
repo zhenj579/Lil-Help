@@ -1,6 +1,7 @@
 package com.example.lilhelp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.ShowableListMenu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -64,7 +65,7 @@ public class HomeActivity extends AppCompatActivity {
         cogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                startActivity(new Intent(HomeActivity.this, Settings.class));
             }
         });
     }

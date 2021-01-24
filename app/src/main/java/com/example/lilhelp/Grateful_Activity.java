@@ -23,9 +23,8 @@ public class Grateful_Activity extends AppCompatActivity {
         Button forward = (Button) findViewById(R.id.grateful_forward_button);
         Button back = (Button) findViewById(R.id.grateful_back_button);
         Button home = (Button) findViewById(R.id.grateful_question_home_button);
-        final String today = LocalDateTime.now().toString().substring(0,10); // trim off the clock portion of the date
         final Bundle bn = getIntent().getExtras();
-        final JournalEntry je = (JournalEntry) bn.getSerializable(today);
+        final JournalEntry je = (JournalEntry) bn.getSerializable(DataHandler.today);
         if(je.getGq() != null)
         {
             GratefulQuestion gq = je.getGq();
@@ -46,7 +45,7 @@ public class Grateful_Activity extends AppCompatActivity {
                 {
                     je.getGq().setAnswer(content);
                 }
-                bn.putSerializable(today, je);
+                bn.putSerializable(DataHandler.today, je);
                 intent.putExtras(bn);
                 startActivity(intent);
             }
@@ -66,7 +65,7 @@ public class Grateful_Activity extends AppCompatActivity {
                 {
                     je.getGq().setAnswer(content);
                 }
-                bn.putSerializable(today, je);
+                bn.putSerializable(DataHandler.today, je);
                 intent.putExtras(bn);
                 startActivity(intent);
             }
