@@ -52,7 +52,8 @@ public class PrevJournal_Activity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void update(int year, int month, int dayOfMonth) {
         try {
-            JournalEntry je = DataHandler.get(PrevJournal_Activity.super.getApplicationContext(), year + "-" + month + "-" + dayOfMonth);
+            JournalEntry je = DataHandler.get(PrevJournal_Activity.super.getApplicationContext(),
+                    year + "-" + ( month < 10 ? "0" + month : month + "" ) + "-" + dayOfMonth);
             fq.setText(je.getFq().getAnswer());
             gq.setText(je.getGq().getAnswer());
             aq.setText(je.getAq().getAnswer());
