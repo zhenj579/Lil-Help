@@ -17,14 +17,9 @@ public class LookingForwardQuestion extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeToHomeScreen();
+                finish();
             }
         });
     }
 
-    private void changeToHomeScreen()
-    {
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
-    }
 }
