@@ -12,6 +12,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class PrevJournal_Activity extends AppCompatActivity {
@@ -59,6 +60,8 @@ public class PrevJournal_Activity extends AppCompatActivity {
             aq.setText(je.getAq().getAnswer());
             text.setText(je.getText());
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
