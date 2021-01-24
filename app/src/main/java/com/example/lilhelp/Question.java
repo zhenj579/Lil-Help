@@ -1,6 +1,8 @@
 package com.example.lilhelp;
 
-public abstract class Question {
+import java.io.Serializable;
+
+public abstract class Question implements Serializable {
 
     private String question;
     private String answer;
