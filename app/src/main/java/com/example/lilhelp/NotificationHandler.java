@@ -3,6 +3,7 @@ package com.example.lilhelp;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.util.Log;
 
@@ -48,9 +49,12 @@ public class NotificationHandler {
     public static void sendNotification(String msg)
     {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx, CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setLargeIcon(BitmapFactory.decodeResource(ctx.getResources(), R.mipmap.ic_launcher))
                 .setContentTitle("Lil Help")
                 .setContentText(msg)
+                .setStyle(new NotificationCompat.BigTextStyle()
+                            .bigText(msg))
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true);
 
@@ -67,7 +71,7 @@ public class NotificationHandler {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(60000);
+                        Thread.sleep(10000);
                         sendNotification("Congratulations on accomplishing " + DataHandler.get(ctx, "2021-01-24").getAq().getAnswer() + "!");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
