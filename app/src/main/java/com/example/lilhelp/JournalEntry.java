@@ -1,6 +1,6 @@
 package com.example.lilhelp;
 
-public class JournalEntries {
+public class JournalEntry {
 
     private AccomplishQuestion aq;
     private ForwardQuestion fq;

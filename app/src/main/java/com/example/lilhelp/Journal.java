@@ -7,18 +7,18 @@ import java.util.HashMap;
 public class Journal {
 
     private String journalName;
-    private HashMap<LocalDate, JournalEntries> entries;
+    private HashMap<LocalDate, JournalEntry> entries;
 
     public Journal(String Name) {
         this.journalName = Name;
-        this.entries = new HashMap<LocalDate, JournalEntries>();
+        this.entries = new HashMap<LocalDate, JournalEntry>();
     }
 
-    public void addEntry(LocalDate day, JournalEntries entry) {
+    public void addEntry(LocalDate day, JournalEntry entry) {
         entries.put(day, entry);
     }
 
-    public JournalEntries getEntry(LocalDateTime day) {
+    public JournalEntry getEntry(LocalDateTime day) {
         return entries.get(day);
     }
 
