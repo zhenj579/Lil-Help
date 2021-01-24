@@ -40,4 +40,14 @@ public class JournalEntry implements Serializable {
     public String getText() {
         return text;
     }
+
+    public void print()
+    {
+        System.out.println("--------------------------");
+        System.out.println(fq.getAnswer());
+        System.out.println(gq.getAnswer());
+        System.out.println(aq.getAnswer());
+        System.out.println(text);
+        System.out.println("--------------------------");
+    }
 }
