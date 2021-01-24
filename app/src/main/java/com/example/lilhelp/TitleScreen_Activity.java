@@ -25,7 +25,6 @@ public class TitleScreen_Activity extends AppCompatActivity {
                 try {
                     Thread.sleep(1000);
                     for (float i = (float) (Math.PI / 2); i < Math.PI; i += 0.01f) {
-                        Log.e("SIN OF " + i, "" + Math.sin(i));
                         tv.setAlpha((float) Math.sin(i));
                         Thread.sleep(15);
                     }
