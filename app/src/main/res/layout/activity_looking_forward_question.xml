@@ -32,11 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="60dp"
-            android:layout_marginTop="135dp"
             android:layout_marginEnd="53dp"
             android:layout_marginBottom="534dp"
             android:gravity="center"
@@ -47,14 +45,14 @@
         <Button
             android:id="@+id/looking_forward_button"
             android:layout_width="113dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="150dp"
             android:layout_marginEnd="150dp"
             android:layout_marginBottom="105dp"
-            android:text="@string/next_question_button_name" />
+            android:background="@drawable/arrow_r" />
 
         <EditText
             android:id="@+id/gq_answer"
