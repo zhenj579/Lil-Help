@@ -2,6 +2,7 @@ package com.example.lilhelp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,16 +30,25 @@ public class HomeActivity extends AppCompatActivity {
         helpText = findViewById(R.id.helptext);
         desc = findViewById(R.id.descrip);
         relLay = findViewById(R.id.layout);
-        infoText= findViewById(R.id.info);
+        infoText= findViewById(R.id.infotext);
 
         desc.setVisibility(View.INVISIBLE);
         helpText.setVisibility(View.INVISIBLE);
         hisText.setVisibility(View.INVISIBLE);
         JourText.setVisibility(View.INVISIBLE);
         cogText.setVisibility(View.INVISIBLE);
-        infoButton
+        infoText.setVisibility(View.INVISIBLE);
 
+
+        //Setting click for help button
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, HelpResources.class));
+            }
+        });
     }
+
     public void onClick(View view){
         if(view == infoButton){
             if(isClicked==false){
@@ -48,6 +58,7 @@ public class HomeActivity extends AppCompatActivity {
                 hisText.setVisibility(View.VISIBLE);
                 JourText.setVisibility(View.VISIBLE);
                 cogText.setVisibility(View.VISIBLE);
+                infoText.setVisibility(View.VISIBLE);
                 isClicked=true;
             }
             else{
@@ -57,6 +68,7 @@ public class HomeActivity extends AppCompatActivity {
                 hisText.setVisibility(View.INVISIBLE);
                 JourText.setVisibility(View.INVISIBLE);
                 cogText.setVisibility(View.INVISIBLE);
+                infoText.setVisibility(View.INVISIBLE);
                 isClicked=false;
 
             }
