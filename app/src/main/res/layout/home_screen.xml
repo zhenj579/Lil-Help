@@ -39,29 +39,31 @@
     <Button
 
         android:id="@+id/previousJournals"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginBottom="75dp"
         android:fontFamily="@font/roboto_light"
         android:background="@android:drawable/screen_background_light_transparent"
-        android:text="Previous Journals" />
+        android:text="Previous Journals"
+        android:textSize="20dp"/>
 
     <Button
         android:id="@+id/HELP"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/previousJournals"
         android:layout_centerHorizontal="true"
 
         android:fontFamily="@font/roboto_light"
         android:background="@android:drawable/screen_background_light_transparent"
-        android:text="Help" />
+        android:text="Help"
+        android:textSize="20dp"/>
 
     <Button
         android:id="@+id/journalToday"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_above="@id/previousJournals"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="75dp"
@@ -69,6 +71,7 @@
         android:onClick="onClick"
         android:text="Journal Today"
         android:fontFamily="@font/roboto_light"
+        android:textSize="20dp"
         android:textColor="#000000" />
 
     <TextView
@@ -79,7 +82,8 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/roboto_light"
         android:text="Click this to see your pevious journals!"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/helptext"
@@ -89,7 +93,8 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/roboto_light"
         android:text="Click this for information on how to get help!"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/journaltext"
@@ -99,7 +104,8 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/roboto_light"
         android:text="Click this to log your day and answer some questions!"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/cogtext"
@@ -110,7 +116,8 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/roboto_light"
         android:text="Click this to change notification settings!"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/descrip"
@@ -123,9 +130,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="25dp"
+        android:fontFamily="@font/roboto_light"
         android:text="This app is a mental health app designed to remind you about things you have accomplished, things you're grateful for, and things you're looking forward to. This app will send you notifications depending on your preference that is correspondent to your answers to the journal questions"
         android:textColor="#000000"
-        android:fontFamily="@font/roboto_light" />
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/infotext"
@@ -139,6 +147,18 @@
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/roboto_light"
         android:text="click this agian to revert!"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_light"
+        android:textSize="45dp"
+        android:text="Lil Help"
         android:textColor="#000000" />
 
 </RelativeLayout>
