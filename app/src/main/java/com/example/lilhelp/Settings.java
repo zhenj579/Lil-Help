@@ -11,10 +11,11 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class Settings extends AppCompatActivity {
-    SeekBar notifBar;
-    TextView numNotif;
-    Button homeButton;
-    int notifsPerDay;
+
+    private SeekBar notifBar;
+    private TextView numNotif;
+    private Button homeButton;
+    private static int notifsPerDay = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,5 +67,9 @@ public class Settings extends AppCompatActivity {
             }
         });
 
+    }
+
+    public static int getNotifsPerDay() {
+        return notifsPerDay;
     }
 }

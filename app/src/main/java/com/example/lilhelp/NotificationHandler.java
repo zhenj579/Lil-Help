@@ -4,14 +4,33 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
+import android.util.Log;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import java.io.FileNotFoundException;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class NotificationHandler {
 
-
     public static final String CHANNEL_ID = "motivation_sender";
+    private static Context ctx;
+    public static boolean started = false;
+    private static ExecutorService es = Executors.newSingleThreadExecutor();
+    private static LocalDateTime time = LocalDateTime.now();
+    private static int timeStep = 86400 / Settings.getNotifsPerDay();
+    private static int amountSentToday = 0;
+
+    public static void setContext(Context cotx) {
+        ctx = cotx;
+    }
 
     public static void createNotificationChannel(String channelName, String channelDescription, Context context)
     {
@@ -26,18 +45,37 @@ public class NotificationHandler {
     }
 
     //for testing
-    public static void sendNotification(Context context)
+    public static void sendNotification(String msg)
     {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("My notification")
-                .setContentText("Hello World!")
+                .setContentTitle("Lil Help")
+                .setContentText(msg)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true);
 
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(ctx);
 
         final int id = 5;
         notificationManager.notify(id, builder.build());
+    }
+
+    public static void startNotif() {
+        if(!started) {
+            started = true;
+            es.execute(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(10000);
+                        sendNotification("Congratulations on accomplishing " + DataHandler.get(ctx, "2021-01-24").getAq().getAnswer() + "!");
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
     }
 }
