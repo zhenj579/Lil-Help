@@ -19,7 +19,8 @@
         android:fontFamily="@font/roboto_light"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:scrollHorizontally="false" />
+        android:scrollHorizontally="false"
+        />
 
     <Button
         android:id="@+id/homeButtonJournalScreen"

@@ -5,9 +5,11 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
 import android.renderscript.ScriptGroup;
+import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,6 +17,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
@@ -25,8 +28,11 @@ public class DataHandler {
 
     public static void save(Context context, String fileContent) throws FileNotFoundException {
         try (FileOutputStream fos = context.openFileOutput(today, Context.MODE_PRIVATE)) {
+            BufferedOutputStream bos = new BufferedOutputStream(fos);
             byte[] contentByteArray = fileContent.getBytes();
-            fos.write(contentByteArray);
+            bos.write(contentByteArray);
+            bos.flush();
+            bos.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -67,7 +73,7 @@ public class DataHandler {
                 }
                 else
                 {
-                    sb.append(line);
+                    sb.append(line + "\n");
                 }
                 line = reader.readLine();
             }

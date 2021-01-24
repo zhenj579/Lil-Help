@@ -2,6 +2,7 @@ package com.example.lilhelp;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -59,6 +60,10 @@ public class PrevJournal_Activity extends AppCompatActivity {
             aq.setText(je.getAq().getAnswer());
             text.setText(je.getText());
         } catch (FileNotFoundException e) {
+            fq.setText("");
+            gq.setText("");
+            aq.setText("");
+            text.setText("");
             e.printStackTrace();
         }
     }
