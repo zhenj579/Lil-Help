@@ -29,14 +29,15 @@ public class HomeActivity extends AppCompatActivity {
         helpText = findViewById(R.id.helptext);
         desc = findViewById(R.id.descrip);
         relLay = findViewById(R.id.layout);
-        infoText= findViewById(R.id.info);
+        infoText= findViewById(R.id.infotext);
 
         desc.setVisibility(View.INVISIBLE);
         helpText.setVisibility(View.INVISIBLE);
         hisText.setVisibility(View.INVISIBLE);
         JourText.setVisibility(View.INVISIBLE);
         cogText.setVisibility(View.INVISIBLE);
-        infoButton
+        infoText.setVisibility(View.INVISIBLE);
+
 
     }
     public void onClick(View view){
@@ -48,6 +49,7 @@ public class HomeActivity extends AppCompatActivity {
                 hisText.setVisibility(View.VISIBLE);
                 JourText.setVisibility(View.VISIBLE);
                 cogText.setVisibility(View.VISIBLE);
+                infoText.setVisibility(View.VISIBLE);
                 isClicked=true;
             }
             else{
@@ -57,6 +59,7 @@ public class HomeActivity extends AppCompatActivity {
                 hisText.setVisibility(View.INVISIBLE);
                 JourText.setVisibility(View.INVISIBLE);
                 cogText.setVisibility(View.INVISIBLE);
+                infoText.setVisibility(View.INVISIBLE);
                 isClicked=false;
 
             }
