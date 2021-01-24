@@ -45,7 +45,7 @@
             android:textStyle="bold|italic" />
 
         <Button
-            android:id="@+id/forward_question_next_button"
+            android:id="@+id/looking_forward_button"
             android:layout_width="113dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -57,10 +57,10 @@
             android:text="@string/next_question_button_name" />
 
         <EditText
-            android:id="@+id/fq_answer"
+            android:id="@+id/gq_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/forward_question_next_button"
+            android:layout_above="@+id/accomplished_forward_button"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
