@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".Settings"/>
         <activity android:name=".TitleScreen_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,9 @@
         <activity android:name=".Forward_Activity"/>
         <activity android:name=".PrevJournal_Activity"/>
         <activity android:name=".HelpResources" />
+        <activity android:name=".Grateful_Activity"/>
+        <activity android:name=".Accomplished_Activity"/>
+        <activity android:name=".JournalScreen"/>
         <activity android:name=".Pop" android:theme="@style/AppTheme.CustomTheme"></activity>
 
         <meta-data
