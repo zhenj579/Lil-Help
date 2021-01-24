@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/cogButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/home_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/informationButton"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="175dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+
+        android:id="@+id/previousJournals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:text="Previous Journals" />
+
+    <Button
+        android:id="@+id/HELP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/previousJournals"
+        android:layout_centerHorizontal="true"
+
+        android:text="Help" />
+
+    <Button
+        android:id="@+id/journalToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/previousJournals"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:text="Journal Today" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/previousJournals"
+        android:layout_centerHorizontal="true"
+        android:text="Click this to see your pevious journals!"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/HELP"
+        android:layout_centerHorizontal="true"
+        android:text="Click this for information on how to get help!"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/journalToday"
+        android:layout_centerHorizontal="true"
+        android:text="Click this to log your day and answer some questions!"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="142dp"
+        android:layout_height="36dp"
+        android:layout_below="@id/cogButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Click this to change notification settings!"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="This app is a mental health app designed to remind you about things you have accomplished, things you're grateful for, and things you're looking forward to. This app will send you notifications depending on your preference that is correspondent to your answers to the journal questions"
+        android:textColor="#000000" />
+
+</RelativeLayout>
