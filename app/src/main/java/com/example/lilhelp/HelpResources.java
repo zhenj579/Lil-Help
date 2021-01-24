@@ -2,6 +2,7 @@ package com.example.lilhelp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,8 +18,14 @@ public class HelpResources extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                goBackHome();
             }
         });
+    }
+
+    private void goBackHome()
+    {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
     }
 }
