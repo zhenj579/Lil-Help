@@ -16,12 +16,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.time.LocalDateTime;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class DataHandler {
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public static void save(Context context, String filename, String fileContent) throws FileNotFoundException {
-        try (FileOutputStream fos = context.openFileOutput(filename, Context.MODE_PRIVATE)) {
+    public static final String today = LocalDateTime.now().toString().substring(0,10); // yr/month/day format
+
+    public static void save(Context context, String fileContent) throws FileNotFoundException {
+        try (FileOutputStream fos = context.openFileOutput(today, Context.MODE_PRIVATE)) {
             byte[] contentByteArray = fileContent.getBytes();
             fos.write(contentByteArray);
         } catch (IOException e) {
