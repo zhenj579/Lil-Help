@@ -6,10 +6,6 @@ import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import org.w3c.dom.Text;
-
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -42,6 +38,7 @@ public class TitleScreen_Activity extends AppCompatActivity {
     }
 
     public void finish(){
-        //Intent intent = new Intent(this, )
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
     }
 }
