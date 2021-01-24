@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -12,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class Pop extends Activity {
     Button home, ans, noAns;
@@ -34,12 +36,13 @@ public class Pop extends Activity {
 
     }
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void onClick(View v) throws FileNotFoundException {
+    public void onClick(View v) throws IOException {
         Intent intent = new Intent();
-        if(DataHandler.get(getApplicationContext(), DataHandler.today) != null)
+        JournalEntry je = DataHandler.get(this, DataHandler.today);
+        if(je != null)
         {
             Bundle b = new Bundle();
-            b.putSerializable(DataHandler.today,  DataHandler.get(getApplicationContext(), DataHandler.today));
+            b.putSerializable(DataHandler.today, je);
             intent.putExtras(b);
         }
         if(v==home){
