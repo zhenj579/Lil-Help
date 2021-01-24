@@ -16,8 +16,6 @@ import java.time.LocalDateTime;
 
 public class Forward_Activity extends AppCompatActivity {
 
-
-
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {

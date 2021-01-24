@@ -9,16 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Grateful_Activity"></activity>
         <activity android:name=".TitleScreen_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".Forward_Activity" />
+        <activity android:name=".HomeActivity"/>
+        <activity android:name=".Forward_Activity"/>
+        <activity android:name=".PrevJournal_Activity"/>
     </application>
 
 </manifest>
