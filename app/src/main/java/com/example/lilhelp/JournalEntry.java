@@ -1,6 +1,8 @@
 package com.example.lilhelp;
 
-public class JournalEntry {
+import java.io.Serializable;
+
+public class JournalEntry implements Serializable {
 
     private AccomplishQuestion aq;
     private ForwardQuestion fq;
