@@ -21,15 +21,14 @@ public class JournalScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journal_screen);
-        final String today = LocalDateTime.now().toString().substring(0,10); // trim off clock portion of date
         TextView journal_date = (TextView) findViewById(R.id.journal_date);
-        journal_date.setText(today);
+        journal_date.setText(DataHandler.today);
         Button save = (Button) findViewById(R.id.saveButton);
         Button ansQuestion = (Button) findViewById(R.id.AnswerQuestionsButton);
         Button homeButton = (Button) findViewById(R.id.homeButtonJournalScreen);
         final EditText ans = (EditText) findViewById(R.id.journal_screen_ans);
         final Bundle b = getIntent().getExtras();
-        final JournalEntry je = (JournalEntry) b.getSerializable(today);
+        final JournalEntry je = (JournalEntry) b.getSerializable(DataHandler.today);
         if(je.getText() != null)
         {
             ans.setText(je.getText());
@@ -47,7 +46,7 @@ public class JournalScreen extends AppCompatActivity {
                 String content = ans.getText().toString();
                 je.setText(content);
                 Intent intent = new Intent(getApplicationContext(), Forward_Activity.class);
-                b.putSerializable(today,je);
+                b.putSerializable(DataHandler.today,je);
                 intent.putExtras(b);
                 startActivity(intent);
             }
