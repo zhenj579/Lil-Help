@@ -6,18 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
+    <Button
+        android:id="@+id/homeButton2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/home_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
     <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="311dp"
-        android:layout_height="19dp"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="106dp" />
+        android:id="@+id/notifBar"
+        android:layout_width="277dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/numNotif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/seekBar"
-        tools:layout_editor_absoluteY="106dp" />
+        android:fontFamily="sans-serif-light"
+        android:text="0 Times a Day"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/notifBar"
+        app:layout_constraintEnd_toStartOf="@+id/notifBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/notifBar"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/notificationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="How often do you want to be notified?"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <TextView
+        android:id="@+id/settingsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Settings"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
