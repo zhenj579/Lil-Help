@@ -2,8 +2,8 @@ package com.example.lilhelp;
 
 public abstract class Question {
 
-    protected String question;
-    protected String answer;
+    private String question;
+    private String answer;
 
     protected Question(String q) {
         question = q;
@@ -16,5 +16,7 @@ public abstract class Question {
     public void setAnswer(String a) {
         answer = a;
     }
+
+    public String getAnswer() { return answer; }
 
 }
