@@ -39,29 +39,33 @@
     <Button
 
         android:id="@+id/previousJournals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginBottom="75dp"
+        android:background="@android:drawable/screen_background_light_transparent"
         android:text="Previous Journals" />
 
     <Button
         android:id="@+id/HELP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_below="@id/previousJournals"
         android:layout_centerHorizontal="true"
 
+        android:background="@android:drawable/screen_background_light_transparent"
         android:text="Help" />
 
     <Button
         android:id="@+id/journalToday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_above="@id/previousJournals"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="75dp"
-        android:text="Journal Today" />
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:text="Journal Today"
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/histext"
