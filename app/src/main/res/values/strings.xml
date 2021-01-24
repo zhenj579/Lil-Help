@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Lil Help</string>
+    <string name="channel_name">send_motivation_channel</string>
+    <string name="channel_description">for sending motivation notifications</string>
+    <string name="forward_question">What things are you looking forward to? </string>
+    <string name="grateful_question">What things are you grateful for?</string>
+    <string name="accomplished_question">What are some things you have accomplished?</string>
+    <string name="save_button_name"> Save </string>
 </resources>
