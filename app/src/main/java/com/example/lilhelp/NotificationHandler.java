@@ -67,7 +67,7 @@ public class NotificationHandler {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(10000);
+                        Thread.sleep(60000);
                         sendNotification("Congratulations on accomplishing " + DataHandler.get(ctx, "2021-01-24").getAq().getAnswer() + "!");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
