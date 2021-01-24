@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
     public void onClick(View view){
         if(view == infoButton){
             if(isClicked==false){
-                relLay.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+
                 desc.setVisibility(View.VISIBLE);
                 helpText.setVisibility(View.VISIBLE);
                 hisText.setVisibility(View.VISIBLE);
@@ -72,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
                 isClicked=true;
             }
             else{
-                relLay.setBackgroundColor(getResources().getColor(android.R.color.white));
+
                 desc.setVisibility(View.INVISIBLE);
                 helpText.setVisibility(View.INVISIBLE);
                 hisText.setVisibility(View.INVISIBLE);
