@@ -26,6 +26,7 @@ public class JournalScreen extends AppCompatActivity {
         journal_date.setText(today);
         Button save = (Button) findViewById(R.id.saveButton);
         Button ansQuestion = (Button) findViewById(R.id.AnswerQuestionsButton);
+        Button homeButton = (Button) findViewById(R.id.homeButtonJournalScreen);
         final EditText ans = (EditText) findViewById(R.id.journal_screen_ans);
         final Bundle b = getIntent().getExtras();
         final JournalEntry je = (JournalEntry) b.getSerializable(today);
@@ -33,6 +34,13 @@ public class JournalScreen extends AppCompatActivity {
         {
             ans.setText(je.getText());
         }
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
         ansQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
