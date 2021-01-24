@@ -52,7 +52,7 @@ public class JournalScreen extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 String s = je.getFq().getAnswer() + "\nGQ\n" + je.getGq().getAnswer() + "\nAQ\n" + je.getAq().getAnswer() + "\ntext\n" + content;
                 try {
-                    DataHandler.save(getApplicationContext(), today, s);
+                    DataHandler.save(getApplicationContext(), s);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
