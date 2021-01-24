@@ -5,6 +5,7 @@
     <string name="forward_question">What things are you looking forward to? </string>
     <string name="grateful_question">What things are you grateful for?</string>
     <string name="accomplished_question">What are some things you have accomplished?</string>
+    <string name="next_question_button_name"> Next Question </string>
     <string name="save_button_name"> Save </string>
     <string name="lil_help"> Lil Help </string>
 </resources>

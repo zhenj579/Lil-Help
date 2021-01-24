@@ -46,19 +46,19 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="113dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="163dp"
-            android:layout_marginEnd="158dp"
-            android:layout_marginBottom="110dp"
-            android:text="@string/save_button_name" />
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="105dp"
+            android:text="@string/next_question_button_name" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine2"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/button2"
             android:layout_alignParentStart="true"
@@ -72,7 +72,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:maxLines="4" />
+            android:lines="4" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

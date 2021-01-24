@@ -18,14 +18,8 @@ public class HelpResources extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goBackHome();
+                finish();
             }
         });
-    }
-
-    private void goBackHome()
-    {
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
     }
 }
