@@ -2,6 +2,7 @@ package com.example.lilhelp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,9 +37,17 @@ public class HomeActivity extends AppCompatActivity {
         hisText.setVisibility(View.INVISIBLE);
         JourText.setVisibility(View.INVISIBLE);
         cogText.setVisibility(View.INVISIBLE);
-        infoButton
 
+
+        //Setting click for help button
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, HelpResources.class));
+            }
+        });
     }
+
     public void onClick(View view){
         if(view == infoButton){
             if(isClicked==false){
