@@ -27,16 +27,19 @@
 
             <CalendarView
                 android:id="@+id/calendarView2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center" />
 
             <TextView
                 android:id="@+id/accompQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_light"
+                android:layout_gravity="center"
                 android:text="What are some things you have accomplished?"
                 android:textColor="#000000"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -44,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_light"
+                android:textSize="18sp"
                 android:textStyle="italic" />
 
             <TextView
@@ -51,6 +55,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_light"
+                android:textSize="18sp"
+                android:layout_gravity="center"
                 android:text="What things are you looking forward to?"
                 android:textColor="#000000"
                 android:textStyle="bold" />
@@ -59,6 +65,8 @@
                 android:id="@+id/forwardAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="18sp"
+
                 android:fontFamily="@font/roboto_light"
                 android:textStyle="italic" />
 
@@ -67,14 +75,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_light"
+                android:layout_gravity="center"
                 android:text="What things are you grateful for?"
                 android:textColor="#000000"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/gratefulAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="18sp"
                 android:fontFamily="@font/roboto_light"
                 android:textStyle="italic" />
 
@@ -83,7 +94,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_light"
+                android:textSize="18sp"
                 android:text="Journal"
+                android:layout_gravity="center"
                 android:textColor="#000000"
                 android:textStyle="bold" />
 
@@ -92,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="167dp"
                 android:fontFamily="@font/roboto_light"
+                android:textSize="18sp"
                 android:textStyle="italic" />
         </LinearLayout>
     </ScrollView>
