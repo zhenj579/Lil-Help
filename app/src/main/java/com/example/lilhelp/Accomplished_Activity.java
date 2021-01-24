@@ -43,7 +43,7 @@ public class Accomplished_Activity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), JournalScreen.java);
+                Intent intent = new Intent(getApplicationContext(), JournalScreen.class);
                 JournalEntry je = new JournalEntry();
                 if(getIntent().getExtras() != null)
                 {
