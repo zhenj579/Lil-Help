@@ -14,9 +14,10 @@
 
         <Button
             android:id="@+id/homeOnPop"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/home_icon"
+            android:layout_marginBottom="10dp"
             android:onClick="onClick" />
 
         <TextView
@@ -26,6 +27,7 @@
             android:layout_below="@id/homeOnPop"
             android:layout_centerInParent="false"
             android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_light"
             android:text="Would you like to answer questions or head straight to the journal?"
             android:textColor="#000000"
             android:textSize="18sp"
@@ -43,6 +45,7 @@
                 android:layout_below="@id/textView4"
                 android:layout_marginTop="4dp"
                 android:layout_toRightOf="@id/noAnsQ"
+                android:fontFamily="@font/roboto_light"
                 android:onClick="onClick"
                 android:text="Answer Questions"
                 app:layout_constraintEnd_toStartOf="@+id/noAnsQ"
@@ -57,6 +60,7 @@
                 android:layout_below="@id/textView4"
                 android:layout_centerInParent="false"
                 android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_light"
                 android:onClick="onClick"
                 android:text="Skip Questions"
                 app:layout_constraintEnd_toEndOf="parent"

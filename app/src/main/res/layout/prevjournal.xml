@@ -25,6 +25,7 @@
                 android:id="@+id/accompQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
                 android:text="What are some things you have accomplished?"
                 android:textColor="#000000"
                 android:textStyle="bold" />
@@ -33,12 +34,15 @@
                 android:id="@+id/accompAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="TextView"
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/forwardQuestion"
+                android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
                 android:text="What things are you looking forward to?"
                 android:textColor="#000000"
                 android:textStyle="bold" />
@@ -47,12 +51,15 @@
                 android:id="@+id/forwardAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="TextView"
                 android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/gratefulQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
                 android:text="What things are you grateful for?"
                 android:textColor="#000000"
                 android:textStyle="bold" />
@@ -61,12 +68,15 @@
                 android:id="@+id/gratefulAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="TextView"
                 android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/journal_logo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
                 android:text="Journal"
                 android:textColor="#000000"
                 android:textStyle="bold" />
@@ -75,6 +85,8 @@
                 android:id="@+id/jorunal_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="TextView"
                 android:textStyle="italic" />
         </LinearLayout>
     </ScrollView>

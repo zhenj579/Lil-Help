@@ -16,9 +16,9 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:fontFamily="@font/roboto_light"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-
         android:scrollHorizontally="false" />
 
     <Button
@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/homeButtonJournalScreen"
         android:layout_marginLeft="20dp"
+        android:fontFamily="@font/roboto_light"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="30sp" />
@@ -52,6 +53,7 @@
         android:layout_below="@id/journal_date"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="false"
+        android:fontFamily="@font/roboto_light"
         android:layout_marginTop="50dp"
         android:text="Would you like to record your day?"
         android:textColor="#000000"
@@ -63,7 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/journal_screen_ans"
         android:layout_centerHorizontal="true"
-
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/roboto_light"
         android:text="Save" />
 
     <Button
@@ -75,5 +78,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100px"
         android:layout_margin="20dp"
+        android:fontFamily="@font/roboto_light"
         android:text="Go Back To Questions" />
 </RelativeLayout>
