@@ -16,8 +16,7 @@ public class HomeActivity extends AppCompatActivity {
     private TextView cogText, JourText, hisText, helpText, desc, infoText;
     private RelativeLayout relLay;
     private Boolean isClicked;
-    private Intent intentJournal;
-    private Intent prevJournal;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,21 +26,16 @@ public class HomeActivity extends AppCompatActivity {
         cogButton = findViewById(R.id.cogButton);
         infoButton = findViewById(R.id.informationButton);
         JournToday = findViewById(R.id.journalToday);
-        intentJournal = new Intent(this, Forward_Activity.class);
-        prevJournal = new Intent(this, PrevJournal_Activity.class);
-        JournToday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(intentJournal);
-            }
-        });
+        intent = new Intent(this, PrevJournal_Activity.class);
+
         hisjournal = findViewById(R.id.previousJournals);
         hisjournal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(prevJournal);
+                startActivity(intent);
             }
         });
+
         help = findViewById(R.id.HELP);
         cogText = findViewById(R.id.cogtext);
         JourText = findViewById(R.id.journaltext);
@@ -70,7 +64,7 @@ public class HomeActivity extends AppCompatActivity {
         cogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, Settings.class));
+                
             }
         });
     }
@@ -107,8 +101,10 @@ public class HomeActivity extends AppCompatActivity {
                 isClicked=false;
 
             }
+        }
 
-
+        if(view == JournToday){
+            startActivity(new Intent(HomeActivity.this, Pop.class));
         }
     }
 }

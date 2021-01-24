@@ -9,21 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Accomplished_Activity"></activity>
-        <activity android:name=".Settings" />
+        <activity android:name=".Settings"></activity>
         <activity android:name=".TitleScreen_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".Forward_Activity" />
-        <activity android:name=".PrevJournal_Activity" />
+        <activity android:name=".HomeActivity"/>
+        <activity android:name=".Forward_Activity"/>
+        <activity android:name=".PrevJournal_Activity"/>
         <activity android:name=".HelpResources" />
-        <activity android:name=".Grateful_Activity"/>
-
+        <activity android:name=".Pop" android:theme="@style/AppTheme.CustomTheme"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
