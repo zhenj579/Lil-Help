@@ -25,6 +25,9 @@ public class Forward_Activity extends AppCompatActivity {
         if(saved != null)
         {
             JournalEntry savedJE = (JournalEntry) saved.getSerializable(DataHandler.today);
+            if(savedJE == null) {
+                savedJE = new JournalEntry();
+            }
             String savedContent = savedJE.getFq().getAnswer();
             ans.setText(savedContent);
         }

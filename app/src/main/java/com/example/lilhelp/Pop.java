@@ -36,9 +36,15 @@ public class Pop extends Activity {
 
     }
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void onClick(View v) throws IOException {
+    public void onClick(View v) {
         Intent intent = new Intent();
-        JournalEntry je = DataHandler.get(this, DataHandler.today);
+        JournalEntry je = null;
+        try {
+            je = DataHandler.get(this, DataHandler.today);
+        } catch (FileNotFoundException e) {
+            je = new JournalEntry();
+            e.printStackTrace();
+        }
         if(je != null)
         {
             Bundle b = new Bundle();

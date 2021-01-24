@@ -20,7 +20,7 @@ public class PrevJournal_Activity extends AppCompatActivity {
 
     private CalendarView cv;
     private TextView fq, gq, aq, text;
-    Button hm;
+    private Button hm;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -34,7 +34,7 @@ public class PrevJournal_Activity extends AppCompatActivity {
         aq = (TextView) findViewById(R.id.accompAnswer);
         text = (TextView) findViewById(R.id.jorunal_text);
         LocalDate ld = LocalDate.now();
-        update(ld.getYear(), ld.getMonth().getValue(), ld.getDayOfMonth());
+        update(ld.getYear(), ld.getMonth().getValue() - 1, ld.getDayOfMonth());
         cv.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
@@ -53,7 +53,9 @@ public class PrevJournal_Activity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void update(int year, int month, int dayOfMonth) {
+        month++;
         try {
+            Log.e("Month", month + "");
             JournalEntry je = DataHandler.get(PrevJournal_Activity.super.getApplicationContext(),
                     year + "-" + ( month < 10 ? "0" + month : month + "" ) + "-" + dayOfMonth);
             fq.setText(je.getFq().getAnswer());

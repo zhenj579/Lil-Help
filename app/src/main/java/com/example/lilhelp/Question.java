@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public abstract class Question implements Serializable {
 
-    private String question;
-    private String answer;
+    private String question = "";
+    private String answer = "";
 
     protected Question(String q) {
         question = q;

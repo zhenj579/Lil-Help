@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class JournalEntry implements Serializable {
 
-    private AccomplishQuestion aq;
-    private ForwardQuestion fq;
-    private GratefulQuestion gq;
-    private String text;
+    private AccomplishQuestion aq = new AccomplishQuestion();
+    private ForwardQuestion fq = new ForwardQuestion();
+    private GratefulQuestion gq = new GratefulQuestion();
+    private String text = "";
 
     public void setAq(AccomplishQuestion aq) {
         this.aq = aq;
@@ -50,4 +50,5 @@ public class JournalEntry implements Serializable {
         System.out.println(text);
         System.out.println("--------------------------");
     }
+
 }
