@@ -2,6 +2,8 @@ package com.example.lilhelp;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
@@ -16,12 +18,14 @@ public class PrevJournal_Activity extends AppCompatActivity {
 
     private CalendarView cv;
     private TextView fq, gq, aq, text;
+    Button hm;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prevjournal);
+
         cv = (CalendarView) findViewById(R.id.calendarView2);
         fq = (TextView) findViewById(R.id.forwardAnswer);
         gq = (TextView) findViewById(R.id.gratefulAnswer);
@@ -34,6 +38,13 @@ public class PrevJournal_Activity extends AppCompatActivity {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 update(year, month, dayOfMonth);
+            }
+        });
+        hm= findViewById(R.id.PrevJHome);
+        hm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
