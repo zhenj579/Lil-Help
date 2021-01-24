@@ -11,10 +11,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
-    Button cogButton,infoButton,JournToday, hisjournal, help;
-    TextView cogText, JourText, hisText, helpText, desc, infoText;
-    RelativeLayout relLay;
-    Boolean isClicked;
+
+    private Button cogButton,infoButton,JournToday, hisjournal, help;
+    private TextView cogText, JourText, hisText, helpText, desc, infoText;
+    private RelativeLayout relLay;
+    private Boolean isClicked;
+    private Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,13 @@ public class HomeActivity extends AppCompatActivity {
         cogButton = findViewById(R.id.cogButton);
         infoButton = findViewById(R.id.informationButton);
         JournToday = findViewById(R.id.journalToday);
+        intent = new Intent(this, Forward_Activity.class);
+        JournToday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
         hisjournal = findViewById(R.id.previousJournals);
         help = findViewById(R.id.HELP);
         cogText = findViewById(R.id.cogtext);
