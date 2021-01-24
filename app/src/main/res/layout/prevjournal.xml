@@ -33,11 +33,10 @@
                 android:id="@+id/accompAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/forwardQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="What things are you looking forward to?"
@@ -48,7 +47,6 @@
                 android:id="@+id/forwardAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:textStyle="italic" />
 
             <TextView
@@ -63,7 +61,6 @@
                 android:id="@+id/gratefulAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:textStyle="italic" />
 
             <TextView
@@ -78,7 +75,6 @@
                 android:id="@+id/jorunal_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:textStyle="italic" />
         </LinearLayout>
     </ScrollView>
