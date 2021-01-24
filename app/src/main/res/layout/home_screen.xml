@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
 
     <Button
@@ -16,7 +17,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/gear"
+        android:background="@drawable/gear_button_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +31,7 @@
         android:layout_marginLeft="175dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/info"
+        android:background="@drawable/info_button_bg"
         android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,10 +44,10 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginBottom="75dp"
+        android:background="@drawable/button_bg"
         android:fontFamily="@font/roboto_light"
-        android:background="@android:drawable/screen_background_light_transparent"
         android:text="Previous Journals"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/HELP"
@@ -54,11 +55,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/previousJournals"
         android:layout_centerHorizontal="true"
-
+        android:background="@drawable/button_bg"
         android:fontFamily="@font/roboto_light"
-        android:background="@android:drawable/screen_background_light_transparent"
         android:text="Help"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/journalToday"
@@ -67,12 +67,12 @@
         android:layout_above="@id/previousJournals"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="75dp"
-        android:background="@android:drawable/screen_background_light_transparent"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/roboto_light"
         android:onClick="onClick"
         android:text="Journal Today"
-        android:fontFamily="@font/roboto_light"
-        android:textSize="20dp"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/histext"
@@ -157,8 +157,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_light"
-        android:textSize="45dp"
         android:text="Lil Help"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="45dp" />
 
 </RelativeLayout>

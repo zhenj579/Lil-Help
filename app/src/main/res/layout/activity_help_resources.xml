@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".HelpResources">
 
     <TextView
@@ -41,7 +42,7 @@
         android:id="@+id/homeButton"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:background="@drawable/home_icon"
+        android:background="@drawable/home_button_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"

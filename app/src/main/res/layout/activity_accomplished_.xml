@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Accomplished_Activity">
 
     <RelativeLayout
@@ -25,7 +26,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/home_icon"
+            android:background="@drawable/home_button_bg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +42,7 @@
             android:layout_marginTop="569dp"
             android:layout_marginEnd="223dp"
             android:layout_marginBottom="107dp"
-            android:background="@drawable/arrow_l" />
+            android:background="@drawable/arrow_button_l_bg" />
 
         <TextView
             android:id="@+id/accomplished_question_editText"
@@ -71,7 +72,7 @@
             android:layout_marginStart="237dp"
             android:layout_marginEnd="63dp"
             android:layout_marginBottom="107dp"
-            android:background="@drawable/arrow_r" />
+            android:background="@drawable/arrow_button_r_bg" />
 
         <EditText
             android:id="@+id/aq_answer"

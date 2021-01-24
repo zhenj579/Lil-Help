@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Forward_Activity">
 
     <Button
@@ -14,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/home_icon"
+        android:background="@drawable/home_button_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/forward_question_editText"
@@ -53,7 +54,7 @@
             android:layout_marginStart="150dp"
             android:layout_marginEnd="150dp"
             android:layout_marginBottom="105dp"
-            android:background="@drawable/arrow_r" />
+            android:background="@drawable/arrow_button_r_bg" />
 
         <EditText
             android:id="@+id/gq_answer"

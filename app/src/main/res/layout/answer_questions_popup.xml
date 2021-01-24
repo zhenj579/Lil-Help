@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/button_bg">
 
     <RelativeLayout
         android:id="@+id/relll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:background="#FFFFFF">
 
         <Button
             android:id="@+id/homeOnPop"
@@ -18,7 +19,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="200dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/xx"
+            android:background="@drawable/x_button_bg"
             android:onClick="onClick" />
 
         <TextView
@@ -41,11 +42,12 @@
 
             <Button
                 android:id="@+id/AnswQ"
-                android:layout_width="120dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView4"
                 android:layout_marginTop="4dp"
                 android:layout_toRightOf="@id/noAnsQ"
+                android:background="@drawable/button_bg"
                 android:fontFamily="@font/roboto_light"
                 android:onClick="onClick"
                 android:text="Answer Questions"
@@ -56,14 +58,16 @@
 
             <Button
                 android:id="@+id/noAnsQ"
-                android:layout_width="120dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView4"
                 android:layout_centerInParent="false"
                 android:layout_marginTop="4dp"
+                android:background="@drawable/button_bg"
                 android:fontFamily="@font/roboto_light"
                 android:onClick="onClick"
                 android:text="Skip Questions"
+                android:layout_marginLeft="27dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.773"
                 app:layout_constraintStart_toStartOf="parent"
