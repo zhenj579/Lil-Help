@@ -21,11 +21,10 @@ public class Forward_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_looking_forward_question);
         final EditText ans = (EditText) findViewById(R.id.gq_answer);
-        final String today = LocalDateTime.now().toString().substring(0,10); // trim off the clock portion of the date
         Bundle saved = getIntent().getExtras();
         if(saved != null)
         {
-            JournalEntry savedJE = (JournalEntry) saved.getSerializable(today);
+            JournalEntry savedJE = (JournalEntry) saved.getSerializable(DataHandler.today);
             String savedContent = savedJE.getFq().getAnswer();
             ans.setText(savedContent);
         }
@@ -45,7 +44,7 @@ public class Forward_Activity extends AppCompatActivity {
                 JournalEntry je = new JournalEntry();
                 if(getIntent().getExtras() != null)
                 {
-                    je = (JournalEntry) getIntent().getExtras().getSerializable(today);
+                    je = (JournalEntry) getIntent().getExtras().getSerializable(DataHandler.today);
                 }
                 String content = ans.getText().toString();
                 if(je.getFq() == null)
@@ -59,7 +58,7 @@ public class Forward_Activity extends AppCompatActivity {
                     je.getFq().setAnswer(content);
                 }
                 Bundle b = new Bundle();
-                b.putSerializable(today, (Serializable) je);
+                b.putSerializable(DataHandler.today, (Serializable) je);
                 intent.putExtras(b);
                 startActivity(intent);
             }

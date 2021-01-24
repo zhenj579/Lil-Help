@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 public class Accomplished_Activity extends AppCompatActivity {
 
@@ -21,8 +20,7 @@ public class Accomplished_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accomplished_);
         Bundle b = getIntent().getExtras();
-        final String today = LocalDateTime.now().toString().substring(0,10); // trim off the clock portion of the date
-        JournalEntry je = (JournalEntry)  b.getSerializable(today);
+        JournalEntry je = (JournalEntry)  b.getSerializable(DataHandler.today);
         final EditText ans = (EditText) findViewById(R.id.aq_answer);
         if(je.getAq() != null)
         {
@@ -45,7 +43,7 @@ public class Accomplished_Activity extends AppCompatActivity {
                 JournalEntry je = new JournalEntry();
                 if(getIntent().getExtras() != null)
                 {
-                    je = (JournalEntry) getIntent().getExtras().getSerializable(today);
+                    je = (JournalEntry) getIntent().getExtras().getSerializable(DataHandler.today);
                 }
                 String content = ans.getText().toString();
                 if(je.getAq() == null)
@@ -59,7 +57,7 @@ public class Accomplished_Activity extends AppCompatActivity {
                     je.getAq().setAnswer(content);
                 }
                 Bundle b = new Bundle();
-                b.putSerializable(today, (Serializable) je);
+                b.putSerializable(DataHandler.today, (Serializable) je);
                 intent.putExtras(b);
                 startActivity(intent);
             }
@@ -73,7 +71,7 @@ public class Accomplished_Activity extends AppCompatActivity {
                 JournalEntry je = new JournalEntry();
                 if(getIntent().getExtras() != null)
                 {
-                    je = (JournalEntry) getIntent().getExtras().getSerializable(today);
+                    je = (JournalEntry) getIntent().getExtras().getSerializable(DataHandler.today);
                 }
                 String content = ans.getText().toString();
                 if(je.getAq() == null)
@@ -87,7 +85,7 @@ public class Accomplished_Activity extends AppCompatActivity {
                     je.getAq().setAnswer(content);
                 }
                 Bundle b = new Bundle();
-                b.putSerializable(today, (Serializable) je);
+                b.putSerializable(DataHandler.today, (Serializable) je);
                 intent.putExtras(b);
                 startActivity(intent);
             }
