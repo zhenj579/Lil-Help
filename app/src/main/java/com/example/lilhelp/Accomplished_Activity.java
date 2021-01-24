@@ -67,5 +67,4 @@ public class Accomplished_Activity extends AppCompatActivity {
             }
         });
     }
-    }
 }
